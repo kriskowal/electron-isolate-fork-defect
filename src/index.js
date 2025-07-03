@@ -7,4 +7,5 @@ if (process.env.ELECTRON_RUN_AS_NODE) {
 }
 const { fork } = require('node:child_process');
 const path = require('node:path');
+console.error(path.join(__dirname, 'child.js'));
 fork(path.join(__dirname, 'child.js'), [], {});
